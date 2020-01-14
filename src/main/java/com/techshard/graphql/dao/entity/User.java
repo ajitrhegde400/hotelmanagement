@@ -18,13 +18,13 @@ public class User implements Serializable {
     @Column(name = "ID", nullable = false)
     private String id;
 
-    @Column(name = "firstName", nullable = false)
+    @Column(name = "firstname", nullable = false)
     private String firstName;
 
-    @Column(name = "lastName", nullable = false)
+    @Column(name = "lastname", nullable = false)
     private String lastName;
 
-    @Column(name = "phoneNumber")
+    @Column(name = "phonenumber")
     private String phoneNumber;
 
     @Column(name = "address")
