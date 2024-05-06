@@ -8,6 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+        System.out.println("Starting Food Delivery Service application");
         SpringApplication.run(Application.class, args);
     }
 }
