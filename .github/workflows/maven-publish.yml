@@ -33,6 +33,7 @@ jobs:
     - name: set git sha short
       env:
         sha_commit: ${{ github.event.inputs.branch-or-sha-commit }}
+        sha_short: ""
       id: sha
       run: sha_short="$(echo $sha_commit | cut -c 1-7)"
            echo "sha_short=$sha_short" >> "$GITHUB_ENV"
