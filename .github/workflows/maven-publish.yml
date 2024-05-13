@@ -35,9 +35,12 @@ jobs:
     - name: set git sha short
       env:
         sha_commit: ${{ github.event.inputs.branch-or-sha-commit }}
+        sha_short:  ${{ github.event.inputs.branch-or-sha-commit }} | cut -c 1-7 
       id: sha
       run: echo "sha_short=$(echo $sha_commit | cut -c 1-7)" >> "$GITHUB_ENV"
-             echo "$GITHUB_ENV"
+           echo "$GITHUB_ENV"
+           echo "$sha_short"
+           echo "$sha_short1"
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
