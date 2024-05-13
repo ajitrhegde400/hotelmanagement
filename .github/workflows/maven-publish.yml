@@ -37,8 +37,12 @@ jobs:
       run: echo "sha_short=$(echo $sha_commit | cut -c 1-7)" >> "$GITHUB_ENV"
            echo "sha_short" "$sha_short"
 
+    - name: test git sha short
+      run: echo "sha_short" "$sha_short"
+           echo "$GITHUB_ENV"
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+           
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
