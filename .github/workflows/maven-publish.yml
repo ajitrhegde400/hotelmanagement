@@ -35,7 +35,7 @@ jobs:
         sha_commit: ${{ github.event.inputs.branch-or-sha-commit }}
         sha_short1: (echo ${{ github.event.inputs.branch-or-sha-commit }} | cut -c 1-7) 
       id: sha
-      run: echo "sha_short=$(echo "${{sha_commit}}" | cut -c 1-7)" >> "$GITHUB_ENV"
+      run: echo "sha_short=($sha_short1)" >> "$GITHUB_ENV"
            
            echo "sha_short" "$sha_short"
            echo "sha_short1" "$sha_short1"
